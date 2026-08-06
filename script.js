@@ -5,9 +5,10 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 const TITRES = [
-  "Développeur",
-  "Créateur de projets",
-  "Passionné de tech",
+  "Administrateur Infrastructure & Cloud",
+  "Systèmes, réseaux & cybersécurité",
+  "Microsoft 365 & Windows Server",
+  "Certifié VADE Secure",
 ];
 
 /* ─────────────────────────────────────────────────────────────────── */
@@ -75,41 +76,41 @@ if (typedEl && !prefersReducedMotion) {
 }
 
 /* ── Apparition des sections au défilement ────────────────────────── */
-if (!("IntersectionObserver" in window)) {
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+  /* Lien actif dans le menu selon la section visible */
+  const sections = document.querySelectorAll("main section[id]");
+  const menuLinks = document.querySelectorAll(".nav-link");
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          menuLinks.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+          });
+        }
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px" }
+  );
+  sections.forEach((section) => sectionObserver.observe(section));
+} else {
   // Sécurité pour les très vieux navigateurs : tout afficher directement
   document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
 }
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
-/* ── Lien actif dans le menu selon la section visible ─────────────── */
-const sections = document.querySelectorAll("main section[id]");
-const menuLinks = document.querySelectorAll(".nav-link");
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        menuLinks.forEach((link) => {
-          link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
-        });
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -55% 0px" }
-);
-sections.forEach((section) => sectionObserver.observe(section));
 
 /* ── Bouton "remonter en haut" ────────────────────────────────────── */
 const scrollTopBtn = document.getElementById("scroll-top");
