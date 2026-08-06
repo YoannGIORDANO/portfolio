@@ -5,9 +5,10 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 const TITRES = [
-  "Développeur",
-  "Créateur de projets",
-  "Passionné de tech",
+  "Administrateur Infrastructure & Cloud",
+  "Systèmes, réseaux & cybersécurité",
+  "Microsoft 365 & Windows Server",
+  "Certifié VADE Secure",
 ];
 
 /* ─────────────────────────────────────────────────────────────────── */
