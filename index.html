@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ✏️ RÉFÉRENCEMENT — modifiez le titre et la description ci-dessous
+       (c'est ce qui s'affiche sur Google et quand vous partagez le lien)
+       ═══════════════════════════════════════════════════════════════ -->
+  <title>Yoann Giordano — Portfolio</title>
+  <meta name="description" content="Portfolio de Yoann Giordano : découvrez mes projets, mes compétences et mon parcours.">
+  <meta name="theme-color" content="#0b0f1a">
+
+  <!-- Aperçu du lien quand il est partagé (LinkedIn, réseaux sociaux…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yoann Giordano — Portfolio">
+  <meta property="og:description" content="Découvrez mes projets, mes compétences et mon parcours.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/115475641?v=4">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ════════════════════ BARRE DE NAVIGATION ════════════════════ -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="logo" href="#accueil">Y<span class="logo-dot">G</span><span class="logo-point">.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" href="#apropos">À propos</a></li>
+        <li><a class="nav-link" href="#competences">Compétences</a></li>
+        <li><a class="nav-link" href="#projets">Projets</a></li>
+        <li><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li><a class="nav-link nav-link-cta" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème (clair / sombre)">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ════════════════════ ACCUEIL / HÉRO ════════════════════ -->
+    <section id="accueil" class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-hello">👋 Bonjour, je suis</p>
+
+          <!-- ✏️ Votre nom -->
+          <h1 class="hero-name">Yoann <span class="gradient-text">Giordano</span></h1>
+
+          <!-- ✏️ Les métiers/titres qui défilent se changent dans script.js (tout en haut du fichier) -->
+          <p class="hero-role"><span id="typed">Développeur</span><span class="cursor" aria-hidden="true">|</span></p>
+
+          <!-- ✏️ Votre phrase d'accroche : qui vous êtes, ce que vous faites, ce que vous cherchez -->
+          <p class="hero-pitch">
+            Passionné par la tech et les projets concrets, je conçois des solutions
+            utiles et soignées. Bienvenue sur mon portfolio&nbsp;: découvrez ce que
+            j'ai accompli, mes compétences et mon parcours.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+            <a class="btn btn-ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/YoannGIORDANO" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <!-- ✏️ Remplacez par l'adresse de VOTRE profil LinkedIn -->
+            <a href="https://www.linkedin.com/in/votre-profil-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a href="mailto:projetloka@outlook.com" aria-label="Email" title="M'écrire un email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <!-- ✏️ Votre photo : ceci utilise votre avatar GitHub automatiquement.
+                 Pour une autre photo, mettez un fichier dans le dossier assets/
+                 (ex. assets/photo.jpg) puis remplacez le src par "assets/photo.jpg" -->
+            <img src="https://avatars.githubusercontent.com/u/115475641?v=4" alt="Photo de Yoann Giordano" width="300" height="300">
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#apropos" aria-label="Descendre vers la section À propos">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ════════════════════ À PROPOS ════════════════════ -->
+    <section id="apropos" class="section">
+      <div class="container">
+        <p class="section-kicker reveal">Qui suis-je&nbsp;?</p>
+        <h2 class="section-title reveal">À propos</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <!-- ✏️ Présentez-vous ici : votre histoire, ce qui vous motive,
+                 vos réussites dont vous êtes fier, ce que vous recherchez
+                 (alternance, stage, CDI, missions freelance…) -->
+            <p>
+              Bonjour&nbsp;! Moi c'est <strong>Yoann</strong>. Curieux et motivé, j'aime
+              apprendre en construisant des projets concrets — c'est d'ailleurs comme ça
+              que ce site a vu le jour&nbsp;: conçu de A à Z et hébergé gratuitement.
+            </p>
+            <p>
+              Mon objectif&nbsp;: transformer des idées en réalisations utiles, propres
+              et bien pensées. Chaque projet est pour moi l'occasion de progresser,
+              de me dépasser et de démontrer ce dont je suis capable.
+            </p>
+            <p>
+              Actuellement <strong>ouvert aux opportunités</strong>, je serais ravi
+              d'échanger avec vous — n'hésitez pas à me contacter&nbsp;!
+            </p>
+
+            <!-- ✏️ BOUTON CV : ajoutez votre CV en PDF dans le dossier assets/
+                 (ex. assets/cv-yoann-giordano.pdf) puis retirez les balises de
+                 commentaire ci-dessous pour faire apparaître le bouton :
+            <a class="btn btn-primary btn-cv" href="assets/cv-yoann-giordano.pdf" target="_blank" rel="noopener">
+              📄 Télécharger mon CV
+            </a>
+            -->
+          </div>
+
+          <aside class="about-card reveal">
+            <h3>En bref</h3>
+            <ul class="about-list">
+              <!-- ✏️ Mettez votre ville / région -->
+              <li><span class="about-ico">📍</span> France</li>
+              <li><span class="about-ico">📧</span> <a href="mailto:projetloka@outlook.com">projetloka@outlook.com</a></li>
+              <li><span class="about-ico">💼</span> Ouvert aux opportunités</li>
+              <li><span class="about-ico">🐙</span> <a href="https://github.com/YoannGIORDANO" target="_blank" rel="noopener">github.com/YoannGIORDANO</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ COMPÉTENCES ════════════════════ -->
+    <section id="competences" class="section section-alt">
+      <div class="container">
+        <p class="section-kicker reveal">Ce que je sais faire</p>
+        <h2 class="section-title reveal">Compétences</h2>
+
+        <!-- ✏️ Gardez uniquement ce que vous maîtrisez vraiment, ajoutez le reste.
+             Chaque compétence est un simple <li class="chip">…</li> -->
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-ico">🎨</div>
+            <h3>Front-end</h3>
+            <ul class="chips">
+              <li class="chip">HTML5</li>
+              <li class="chip">CSS3</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Design responsive</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-ico">⚙️</div>
+            <h3>Back-end &amp; Data</h3>
+            <ul class="chips">
+              <li class="chip">Python</li>
+              <li class="chip">SQL</li>
+              <li class="chip">API REST</li>
+              <li class="chip">Node.js</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-ico">🧰</div>
+            <h3>Outils</h3>
+            <ul class="chips">
+              <li class="chip">Git &amp; GitHub</li>
+              <li class="chip">VS Code</li>
+              <li class="chip">Linux</li>
+              <li class="chip">Figma</li>
+            </ul>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-ico">🤝</div>
+            <h3>Atouts</h3>
+            <ul class="chips">
+              <li class="chip">Autonomie</li>
+              <li class="chip">Curiosité</li>
+              <li class="chip">Travail d'équipe</li>
+              <li class="chip">Persévérance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ PROJETS ════════════════════ -->
+    <section id="projets" class="section">
+      <div class="container">
+        <p class="section-kicker reveal">Mes réalisations</p>
+        <h2 class="section-title reveal">Projets</h2>
+
+        <div class="projects-grid">
+
+          <!-- ✅ PROJET RÉEL : ce portfolio ! Vous pouvez le garder. -->
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-folder">📁</span>
+              <div class="project-links">
+                <a href="https://github.com/YoannGIORDANO/portfolio" target="_blank" rel="noopener" aria-label="Code source sur GitHub" title="Code source">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Portfolio personnel</h3>
+            <p>
+              Ce site&nbsp;! Un portfolio moderne et responsive, codé à la main,
+              versionné sur GitHub et hébergé gratuitement avec GitHub Pages.
+              Thème clair/sombre, animations et design soigné.
+            </p>
+            <ul class="chips chips-sm">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">GitHub Pages</li>
+            </ul>
+          </article>
+
+          <!-- ✏️ EXEMPLE À REMPLACER par un de VOS projets :
+               changez le titre, la description, les technologies et les liens. -->
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-folder">📁</span>
+              <div class="project-links">
+                <a href="https://github.com/YoannGIORDANO?tab=repositories" target="_blank" rel="noopener" aria-label="Voir sur GitHub" title="Voir sur GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Projet exemple n°1</h3>
+            <p>
+              Remplacez cette carte par un vrai projet&nbsp;: expliquez en 2-3 phrases
+              ce que fait le projet, le problème qu'il résout et ce que vous avez
+              appris en le réalisant.
+            </p>
+            <ul class="chips chips-sm">
+              <li class="chip">Techno 1</li>
+              <li class="chip">Techno 2</li>
+            </ul>
+          </article>
+
+          <!-- ✏️ EXEMPLE À REMPLACER -->
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-folder">📁</span>
+              <div class="project-links">
+                <a href="https://github.com/YoannGIORDANO?tab=repositories" target="_blank" rel="noopener" aria-label="Voir sur GitHub" title="Voir sur GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Projet exemple n°2</h3>
+            <p>
+              Un conseil&nbsp;: choisissez vos 3 à 6 meilleurs projets, ceux qui
+              montrent le mieux vos compétences. Qualité avant quantité&nbsp;!
+            </p>
+            <ul class="chips chips-sm">
+              <li class="chip">Techno 1</li>
+              <li class="chip">Techno 2</li>
+            </ul>
+          </article>
+
+          <!-- ✏️ EXEMPLE À REMPLACER (dupliquez ce bloc pour ajouter des projets) -->
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-folder">📁</span>
+              <div class="project-links">
+                <a href="https://github.com/YoannGIORDANO?tab=repositories" target="_blank" rel="noopener" aria-label="Voir sur GitHub" title="Voir sur GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Projet exemple n°3</h3>
+            <p>
+              Pour chaque projet, ajoutez si possible un lien vers le code (GitHub)
+              et un lien vers une démo en ligne&nbsp;: c'est ce qui impressionne le plus.
+            </p>
+            <ul class="chips chips-sm">
+              <li class="chip">Techno 1</li>
+              <li class="chip">Techno 2</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="projects-more reveal">
+          <a class="btn btn-ghost" href="https://github.com/YoannGIORDANO?tab=repositories" target="_blank" rel="noopener">
+            Voir tous mes projets sur GitHub →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════ PARCOURS ════════════════════ -->
+    <section id="parcours" class="section section-alt">
+      <div class="container">
+        <p class="section-kicker reveal">Mon chemin</p>
+        <h2 class="section-title reveal">Parcours</h2>
+
+        <div class="timeline-grid">
+
+          <div class="reveal">
+            <h3 class="timeline-heading">💼 Expérience</h3>
+            <div class="timeline">
+              <!-- ✏️ EXEMPLE À REMPLACER : votre expérience la plus récente en premier -->
+              <div class="timeline-item">
+                <span class="timeline-date">2025 — Aujourd'hui</span>
+                <h4>Votre poste — Nom de l'entreprise</h4>
+                <p>Décrivez vos missions et surtout vos résultats concrets
+                   (ce que vous avez amélioré, créé, automatisé…).</p>
+              </div>
+              <!-- ✏️ EXEMPLE À REMPLACER (stages, alternance, jobs, bénévolat : tout compte) -->
+              <div class="timeline-item">
+                <span class="timeline-date">2024</span>
+                <h4>Stage / Projet — Organisation</h4>
+                <p>Même un projet personnel ou associatif a sa place ici
+                   s'il montre vos compétences et votre motivation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 class="timeline-heading">🎓 Formation</h3>
+            <div class="timeline">
+              <!-- ✏️ EXEMPLE À REMPLACER : votre diplôme / formation -->
+              <div class="timeline-item">
+                <span class="timeline-date">2023 — 2025</span>
+                <h4>Votre diplôme — Nom de l'école</h4>
+                <p>Spécialité, options, projets marquants réalisés pendant la formation.</p>
+              </div>
+              <!-- ✏️ EXEMPLE À REMPLACER -->
+              <div class="timeline-item">
+                <span class="timeline-date">2023</span>
+                <h4>Bac / Certification — Établissement</h4>
+                <p>Mention, spécialités ou certifications obtenues (ex. Pix, TOEIC…).</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ CONTACT ════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="section-kicker">Et maintenant&nbsp;?</p>
+          <h2 class="section-title">Travaillons ensemble</h2>
+          <p class="contact-text">
+            Une opportunité, une question, un projet&nbsp;?
+            Ma boîte mail est grande ouverte — je réponds rapidement&nbsp;!
+          </p>
+          <a class="btn btn-primary btn-lg" href="mailto:projetloka@outlook.com">📬 Envoyez-moi un email</a>
+          <div class="contact-socials">
+            <a href="https://github.com/YoannGIORDANO" target="_blank" rel="noopener">GitHub</a>
+            <span aria-hidden="true">•</span>
+            <!-- ✏️ Remplacez par l'adresse de VOTRE profil LinkedIn -->
+            <a href="https://www.linkedin.com/in/votre-profil-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════ PIED DE PAGE ════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Yoann Giordano — Conçu et codé avec ❤️</p>
+      <p><a href="https://github.com/YoannGIORDANO/portfolio" target="_blank" rel="noopener">Code source de ce site</a></p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Remonter en haut de la page">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
