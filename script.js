@@ -24,8 +24,8 @@ const themeToggle = document.getElementById("theme-toggle");
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   root.setAttribute("data-theme", savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-  root.setAttribute("data-theme", "light");
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  root.setAttribute("data-theme", "dark");
 }
 
 themeToggle.addEventListener("click", () => {

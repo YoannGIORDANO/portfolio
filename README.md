@@ -1,6 +1,6 @@
 # 🚀 Portfolio de Yoann Giordano
 
-Site portfolio personnel — moderne, responsive (mobile/tablette/PC), thème clair/sombre, **100 % gratuit à héberger** et **entièrement modifiable** (simple HTML/CSS/JS, aucun outil à installer).
+Site portfolio personnel — responsive (mobile/tablette/PC), **bibliothèque de 3 thèmes intégrée**, mode clair/sombre, **100 % gratuit à héberger** et **entièrement modifiable** (simple HTML/CSS/JS, aucun outil à installer).
 
 **Adresse du site une fois en ligne : `https://yoanngiordano.github.io/portfolio/`**
 
@@ -33,6 +33,20 @@ Ensuite, **chaque modification poussée sur `main` met automatiquement le site �
 
 ---
 
+## 🎨 Bibliothèque de thèmes (3 styles radicalement différents)
+
+Le site embarque **3 thèmes complets**. Pour en changer, modifiez la valeur de `data-skin="…"` **tout en haut de `index.html` ET de `404.html`** (une seule ligne à toucher) :
+
+| Valeur | Style | Ambiance |
+|---|---|---|
+| `brut` *(actif par défaut)* | **Néo-brutalisme** | Fond crème, bordures noires épaisses, ombres décalées, étiquettes colorées inclinées. Audacieux, très tendance chez les créatifs. |
+| `journal` | **Éditorial** | Papier ivoire, typographie serif élégante (Fraunces), filets fins, sections numérotées, photo noir et blanc, lettrine. Chic et intemporel. |
+| `terminal` | **Rétro console** | Monospace, vert phosphore, invites `$`, cartes façon fenêtres de terminal, effet écran cathodique. Assumé geek. |
+
+Chaque thème a un **mode clair et un mode sombre** (bouton 🌙/☀️ sur le site, préférence mémorisée). Les couleurs de chaque thème se règlent dans `styles.css` (variables `--accent`, `--bg`… au début de chaque bloc de thème).
+
+---
+
 ## ✏️ Personnaliser le site (important !)
 
 Tout se modifie directement sur GitHub : ouvrez le fichier → icône **crayon** 🖉 → modifiez → **Commit changes**. Les zones à changer sont marquées par des commentaires `✏️` dans le code.
@@ -47,7 +61,8 @@ Tout se modifie directement sur GitHub : ouvrez le fichier → icône **crayon**
 | Lien LinkedIn | `index.html` | Cherchez `votre-profil-linkedin` (2 endroits) |
 | Photo | `index.html` | Par défaut : votre avatar GitHub. Sinon mettez une image dans `assets/` et changez le `src` |
 | CV téléchargeable | `index.html` + `assets/` | Déposez votre PDF dans `assets/`, puis décommentez le bouton CV (section À propos) |
-| Couleurs du site | `styles.css` | Variables `--accent` et `--accent-2` tout en haut |
+| Thème du site | `index.html` + `404.html` | `data-skin` tout en haut (voir section Bibliothèque de thèmes) |
+| Couleurs du thème | `styles.css` | Variables au début du bloc du thème choisi |
 | Titre Google / aperçu de partage | `index.html` | Balises `<title>` et `<meta>` en haut |
 
 **Conseils contenu** : 3 à 6 projets maximum (les meilleurs), des résultats concrets plutôt que des généralités, et ne listez que les compétences que vous assumez en entretien.
@@ -82,8 +97,8 @@ Double-cliquez simplement sur `index.html` — ou lancez `python3 -m http.server
 
 ```
 index.html   → tout le contenu du site (c'est ici que vous modifiez vos textes)
-styles.css   → le design (couleurs, mise en page, animations)
-script.js    → les interactions (thème, menu mobile, effet machine à écrire…)
+styles.css   → le design : base commune + les 3 thèmes (brut / journal / terminal)
+script.js    → les interactions (mode clair/sombre, menu mobile, machine à écrire…)
 404.html     → page d'erreur personnalisée
 assets/      → vos images et votre CV en PDF
 ```

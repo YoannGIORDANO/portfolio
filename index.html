@@ -1,5 +1,13 @@
 <!doctype html>
-<html lang="fr" data-theme="dark">
+<!-- ═══════════════════════════════════════════════════════════════════
+     🎨 CHOIX DU THÈME : changez la valeur de data-skin ci-dessous.
+        3 thèmes complets sont inclus (détails en haut de styles.css) :
+          "brut"     → néo-brutalisme (bordures épaisses, couleurs franches)
+          "journal"  → éditorial chic (papier, serif, filets fins)
+          "terminal" → rétro console (monospace, vert phosphore)
+        Pensez à mettre le même thème dans 404.html !
+     ═══════════════════════════════════════════════════════════════════ -->
+<html lang="fr" data-theme="light" data-skin="brut">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +18,7 @@
        ═══════════════════════════════════════════════════════════════ -->
   <title>Yoann Giordano — Portfolio</title>
   <meta name="description" content="Portfolio de Yoann Giordano : découvrez mes projets, mes compétences et mon parcours.">
-  <meta name="theme-color" content="#0b0f1a">
+  <meta name="theme-color" content="#f6f1e6">
 
   <!-- Aperçu du lien quand il est partagé (LinkedIn, réseaux sociaux…) -->
   <meta property="og:type" content="website">
@@ -20,9 +28,10 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 
+  <!-- Polices des 3 thèmes (seules celles du thème actif sont téléchargées) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600;1,9..144,900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -59,15 +68,12 @@
 
     <!-- ════════════════════ ACCUEIL / HÉRO ════════════════════ -->
     <section id="accueil" class="hero">
-      <div class="blob blob-1" aria-hidden="true"></div>
-      <div class="blob blob-2" aria-hidden="true"></div>
-
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="hero-hello">👋 Bonjour, je suis</p>
 
           <!-- ✏️ Votre nom -->
-          <h1 class="hero-name">Yoann <span class="gradient-text">Giordano</span></h1>
+          <h1 class="hero-name">Yoann <span class="accent-text">Giordano</span></h1>
 
           <!-- ✏️ Les métiers/titres qui défilent se changent dans script.js (tout en haut du fichier) -->
           <p class="hero-role"><span id="typed">Développeur</span><span class="cursor" aria-hidden="true">|</span></p>
