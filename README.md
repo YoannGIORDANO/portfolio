@@ -20,11 +20,11 @@ Site portfolio personnel — responsive (mobile/tablette/PC), **bibliothèque de
 
 ## 🌍 Mise en ligne : automatique !
 
-Le dépôt inclut un workflow de déploiement (`.github/workflows/deploy.yml`) : **chaque modification poussée sur la branche `main` publie le site automatiquement** en ~1 minute sur :
+GitHub Pages est activé sur ce dépôt (Settings → Pages → Source : « Deploy from a branch », branche `main`, dossier `/ (root)`) : **chaque modification poussée sur la branche `main` publie le site automatiquement** en ~1 minute sur :
 
 **`https://yoanngiordano.github.io/portfolio/`**
 
-Le suivi des déploiements se trouve dans l'onglet **Actions** du dépôt. Vous n'avez rien à configurer. (Méthode manuelle en secours : Settings → Pages → Source « GitHub Actions ».)
+Le suivi des publications se trouve dans l'onglet **Actions** du dépôt (workflow « pages build and deployment »). Vous n'avez rien d'autre à configurer.
 
 💡 **Bonus (adresse encore plus pro)** : si vous renommez le dépôt en `YoannGIORDANO.github.io` (Settings → General → Repository name), le site sera directement sur **`https://yoanngiordano.github.io`** — sans `/portfolio` à la fin. C'est l'adresse idéale pour un CV.
 
