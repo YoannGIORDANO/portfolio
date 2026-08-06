@@ -18,18 +18,15 @@ Site portfolio personnel — responsive (mobile/tablette/PC), **bibliothèque de
 
 ---
 
-## 🌍 Mettre le site en ligne (5 minutes, une seule fois)
+## 🌍 Mise en ligne : automatique !
 
-1. **Fusionnez cette branche dans `main`** : sur la page GitHub du dépôt, cliquez sur le bandeau _« Compare & pull request »_ (ou onglet _Pull requests_ → _New pull request_), puis _« Merge »_.
-2. Allez dans **Settings** (⚙️ du dépôt) → **Pages** (menu de gauche).
-3. Dans **Build and deployment** → **Source**, choisissez **« Deploy from a branch »**.
-4. Branche : **`main`**, dossier : **`/ (root)`** → **Save**.
-5. Attendez 1 à 2 minutes, rechargez la page : votre lien apparaît en haut →
-   **`https://yoanngiordano.github.io/portfolio/`** 🎉
+Le dépôt inclut un workflow de déploiement (`.github/workflows/deploy.yml`) : **chaque modification poussée sur la branche `main` publie le site automatiquement** en ~1 minute sur :
+
+**`https://yoanngiordano.github.io/portfolio/`**
+
+Le suivi des déploiements se trouve dans l'onglet **Actions** du dépôt. Vous n'avez rien à configurer. (Méthode manuelle en secours : Settings → Pages → Source « GitHub Actions ».)
 
 💡 **Bonus (adresse encore plus pro)** : si vous renommez le dépôt en `YoannGIORDANO.github.io` (Settings → General → Repository name), le site sera directement sur **`https://yoanngiordano.github.io`** — sans `/portfolio` à la fin. C'est l'adresse idéale pour un CV.
-
-Ensuite, **chaque modification poussée sur `main` met automatiquement le site à jour** en ~1 minute.
 
 ---
 
