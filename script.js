@@ -6,7 +6,7 @@
 
 const TITRES = [
   "Administrateur Infrastructure & Cloud",
-  "Systèmes, réseaux & cybersécurité",
+  "Spécialisation systèmes",
   "Microsoft 365 & Windows Server",
   "Certifié VADE Secure",
 ];
